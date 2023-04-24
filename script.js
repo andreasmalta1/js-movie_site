@@ -9,7 +9,6 @@ const searchEl = document.getElementById("query")
 returnMovies(APILINK)
 
 function returnMovies (url){
-    console.log(url)
     fetch(url).then(res => res.json()).then(function(data){
         data.results.forEach(movie => {
             const divCard = document.createElement("div")
@@ -17,15 +16,20 @@ function returnMovies (url){
             const divColumn = document.createElement("div")
             const image = document.createElement("img")
             const title = document.createElement("h3")
+            const reviews = document.createElement("a")
 
             title.innerHTML = movie.title
             image.src = IMGPATH + movie.poster_path
+            reviews.setAttribute("href", `movie.html?id=${movie.id}&title=${movie.title}`)
+            reviews.textContent = 'Reviews'
 
             divCard.appendChild(image)
             divCard.appendChild(title)
+            divCard.appendChild(reviews)
             divColumn.appendChild(divCard)
             divRow.appendChild(divColumn)
 
+            reviews.classList.add("reviews")
             divRow.classList.add("row")
             divColumn.classList.add("column")
             divCard.classList.add("card")

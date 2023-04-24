@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Movie Site</title>
+</head>
+<body>
+    <div class="top-nav">
+        <a class="active" href="index.html">Movies Site</a>
+    </div>
+
+    <h1>Reviews for: </h1>
+    <h3 id="title">Movie Title</h3>
+
+    <section id="section">
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    New Review
+                    <p>
+                        <strong>Review: </strong>
+                        <input type="text" id="new_review" value="" placeholder="Enter your review">
+                    </p>
+                    <p>
+                        <strong>User: </strong>
+                        <input type="text" id="new_user" value="" placeholder="Enter your userrname">
+                    </p>
+                    <p><a href="#" onclick="saveReview('new_review', 'new_user')">💾</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="movie.js"></script>
+</body>
+</html>

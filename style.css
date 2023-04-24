@@ -5,10 +5,11 @@
 body{
     background-color: #131720;
     font-family: sans-serif;
+    color: white;
 }
 
 h3{
-    color: white;
+    margin-bottom: 10px;
 }
 
 .top-nav{
@@ -42,9 +43,9 @@ form{
 }
 
 input{
-    all: unset;
+    /* all: unset; */
     font: 15px system-ui;
-    color: #FFF;
+    color: black;
     height: 100%;
     width: 100%;
     padding: 6px 9px;
@@ -69,3 +70,8 @@ input{
     padding: 10px 10px;
 }
 
+.reviews{
+    margin-top: 12px;
+    text-decoration: none;
+    color: lightgreen;
+}
